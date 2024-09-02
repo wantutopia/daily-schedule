@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>생활계획표 생성기</title>
+        <meta name="description" content="생활계획표를 쉽게 생성하고 관리할 수 있는 웹 애플리케이션입니다. 하루의 일정을 계획하고, 차트로 시각화해보세요.">
+        <meta name="keywords" content="생활계획표, 일정관리, 타임 매니지먼트, 원형 차트, 웹 애플리케이션">
+        <meta name="author" content="Your Name">
+    
+        <!-- Open Graph (OG) Tags -->
+        <meta property="og:title" content="생활계획표 생성기">
+        <meta property="og:description" content="하루의 일정을 계획하고, 차트로 시각화해보세요.">
+        <meta property="og:image" content="path_to_your_image/og-image.png">
+        <meta property="og:url" content="http://yourwebsite.com">
+        <meta property="og:type" content="website">
+    
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="생활계획표 생성기">
+        <meta name="twitter:description" content="하루의 일정을 계획하고, 차트로 시각화해보세요.">
+        <meta name="twitter:image" content="path_to_your_image/og-image.png">
+        
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <h1>생활계획표 생성기</h1>
+    <div id="container">
+        <div id="left-column">
+            <div id="chart-container">
+                <canvas id="timeChart" width="500" height="500"></canvas>
+            </div>
+        </div>
+        <div id="right-column">
+            <div id="input-container">
+                <div>
+                    <label for="startTime">시작 시간 (0-24): </label>
+                    <input type="number" id="startTime" min="0" max="24">
+                </div>
+                <div>
+                    <label for="endTime">종료 시간 (0-24): </label>
+                    <input type="number" id="endTime" min="0" max="24">
+                </div>
+                <div>
+                    <label for="task">할 일: </label>
+                    <input type="text" id="task">
+                </div>
+                <div>
+                    <button id="addTask">계획 추가</button>
+                    <button id="clearAll">모두 초기화</button>
+                     <!-- 버튼 위치를 테이블 위로 이동 -->
+                    <button id="changeColors">색상 변경</button>
+                    <button id="downloadChart">계획표 다운로드</button>
+                </div>
+            </div>
+
+            <div id="taskTableContainer">
+                <h2>입력된 계획</h2>
+                <table id="taskTable">
+                    <thead>
+                        <tr>
+                            <th>시작 시간</th>
+                            <th>종료 시간</th>
+                            <th>할 일</th>
+                            <th>수정</th>
+                            <th>삭제</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

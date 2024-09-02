@@ -1,0 +1,140 @@
+body {
+    font-family: Pretendard, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#left-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50%;
+    margin-right: 20px;
+    text-align: center; /* 원형 차트 중앙 정렬 */
+}
+
+#right-column {
+    flex: 1.5;
+    min-width: 300px;
+    max-width: 600px;
+    margin-left: auto;
+}
+
+#chart-container {
+    margin: 20px auto;
+    display: inline-block;
+}
+
+#input-container {
+    margin: 20px 0;
+}
+
+#input-container > div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#taskTableContainer {
+    margin-top: 20px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+@media (max-width: 1024px) {
+    #container {
+        flex-direction: column;
+    }
+
+    #left-column {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%; /* 모바일 화면에서 원형 차트의 최대 너비를 100%로 설정 */
+        max-width: 100%;
+    }
+
+    #chart-container {
+        width: 100%; /* 원형 차트 크기를 100%로 설정 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    canvas {
+        width: 100%; /* 원형 차트가 부모 컨테이너의 너비에 맞게 조정 */
+        height: auto; /* 비율을 유지하면서 높이를 자동으로 조정 */
+    }
+
+    #right-column {
+        margin-left: 0;
+        width: 100%; /* 모바일 화면에서 오른쪽 컬럼이 100% 너비를 사용 */
+    }
+
+    #taskTableContainer {
+        width: 100%; /* 테이블 컨테이너가 100% 너비를 사용하도록 설정 */
+    }
+
+    table {
+        width: 100%; /* 테이블이 100% 너비를 사용하도록 설정 */
+    }
+
+    button {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+}
